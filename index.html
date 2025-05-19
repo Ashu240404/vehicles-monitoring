@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Signal Vehicle Monitoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-bottom: 40px;
+            animation: fadeInDown 1.3s ease;
+        }
+
+        .start-button {
+            padding: 18px 40px;
+            font-size: 18px;
+            color: #fff;
+            background: #28a745;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .start-button:hover {
+            background: #218838;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(40, 167, 69, 0.7);
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚦 Smart Traffic Signal</h1>
+    <p>Monitor real-time traffic and assist emergency vehicle passage using intelligent vision-based detection.</p>
+
+    <form action="/start-camera">
+        <button class="start-button" type="submit">🎥 Start Vehicle Monitoring</button>
+    </form>
+
+    <div class="footer">Developed by Your Team • YOLOv8 + Flask</div>
+</body>
+</html>
